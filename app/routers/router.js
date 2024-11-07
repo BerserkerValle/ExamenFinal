@@ -2,7 +2,7 @@
 let express = require('express');
 let router = express.Router();
 
-
+ //constasntes de rutas 
 
 const juegos = require('../controllers/juegosalquilados.js');
 
