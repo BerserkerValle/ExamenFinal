@@ -1,44 +1,42 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db.config'); 
-
-module.exports = sequelize.define('JuegosAlquilados', {
-    ID_Juego: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-    },
-    Nombre_Juego: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    Genero: {
-        type: DataTypes.STRING
-    },
-    Plataforma: {
-        type: DataTypes.STRING
-    },
-    Fecha_Lanzamiento: {
-        type: DataTypes.DATE
-    },
-    Precio_Alquiler: {
-        type: DataTypes.FLOAT
-    },
-    Disponibilidad: {
-        type: Sequelize.BOOLEAN
-    },
-    Fecha_Alquiler: {
-        type: DataTypes.DATE
-    },
-    Fecha_Devolucion: {
-        type: DataTypes.DATE
-    },
-    Nombre_Cliente: {
-        type: DataTypes.STRING
-    },
-    Comentarios: {
-        type: DataTypes.STRING
-    }
-}, {
-    tableName: 'juegos_alquilados',
-    timestamps: false
-});
+module.exports = (sequelize, Sequelize) => {
+	const JuegosAlquilado = sequelize.define('JuegosAlquilado', {
+	  ID_Juego: {
+			type: Sequelize.INTEGER,
+			autoIncrement: true,
+			primaryKey: true
+	  },
+	  Nombre_Juego: {
+			type: Sequelize.STRING
+	  },
+	  Genero: {
+			type: Sequelize.STRING
+	  },
+	  Plataforma: {
+			type: Sequelize.STRING
+	  },
+	  Fecha_Lanzamiento: {
+			type: Sequelize.DATE
+	  },
+	  Precio_Alquiler: {
+			type: Sequelize.DECIMAL
+	  },
+	  Disponibilidad: {
+			type: Sequelize.BOOLEAN,
+      defaultValue: true 
+	  },
+	  Fecha_Alquiler: {
+			type: Sequelize.DATE
+	  },
+	  Fecha_Devolucion: {
+			type: Sequelize.DATE
+	  },
+	  Nombre_Cliente: {
+			type: Sequelize.STRING
+	  },
+	  Comentarios: {
+			type: Sequelize.TEXT
+	  }
+	});
+	
+	return JuegosAlquilado;
+}
