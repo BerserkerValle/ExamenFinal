@@ -1,5 +1,4 @@
 
-
 const env = require('./env.js');
  
 const Sequelize = require('sequelize');

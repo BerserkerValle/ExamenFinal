@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize'); 
+const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db.config'); 
 
 module.exports = sequelize.define('JuegosAlquilados', {
@@ -40,5 +40,5 @@ module.exports = sequelize.define('JuegosAlquilados', {
     }
 }, {
     tableName: 'juegos_alquilados',
-    timestamps: false 
+    timestamps: false
 });
