@@ -28,6 +28,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
  //para mandar al servidor
 
- db.JuegosAlquilados = require('../models/juegosalquilados.js')(sequelize, Sequelize);
+ db.JuegosAlquilado = require('../models/juegosalquilados.js')(sequelize, Sequelize);
 
 module.exports = db;
