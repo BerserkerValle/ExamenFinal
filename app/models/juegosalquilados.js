@@ -24,7 +24,7 @@ module.exports = sequelize.define('JuegosAlquilados', {
         type: DataTypes.FLOAT
     },
     Disponibilidad: {
-        type: DataTypes.STRING
+        type: Sequelize.BOOLEAN
     },
     Fecha_Alquiler: {
         type: DataTypes.DATE
