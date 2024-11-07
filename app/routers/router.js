@@ -1,9 +1,6 @@
 
-let express = require('express');
-let router = express.Router();
-
- //constasntes de rutas 
-
+const express = require('express');
+const router = express.Router();
 const juegos = require('../controllers/juegosalquilados.js');
 
 
