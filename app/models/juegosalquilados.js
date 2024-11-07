@@ -21,7 +21,8 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.DECIMAL
       },
       Disponibilidad: {
-        type: Sequelize.BOOLEAN
+        type: DataTypes.STRING,  
+        allowNull: false
       },
       Fecha_Alquiler: {
         type: Sequelize.DATE
